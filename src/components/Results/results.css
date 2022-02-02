@@ -1,0 +1,25 @@
+.container-results {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12vh;
+  align-items: center;
+  background-color: darkgreen;
+  height: 50vh;
+  width: 100%;
+}
+.container-txt-results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #572ee5;
+  width: 44vh;
+  height: 8vh;
+  background-color: darkgrey;
+}
+.seccion-gifs {
+  background-color: darkmagenta;
+  margin-top: 28px;
+  width: 90%;
+  height: 100vh;
+}
