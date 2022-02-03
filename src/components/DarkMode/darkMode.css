@@ -1,0 +1,11 @@
+.btn-dark-mode {
+  width: 128px;
+  height: 33px;
+  background-color: #fff;
+  border: 1px solid #6809e1;
+  box-sizing: border-box;
+  border-radius: 61px;
+  font-weight: 700;
+  color: #6809e1;
+  font-size: 16px;
+}
