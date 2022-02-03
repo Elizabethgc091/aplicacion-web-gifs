@@ -21,3 +21,10 @@
   margin-left: 10px;
   font-weight: 600;
 }
+
+.text-large.dark {
+  color: #fff;
+}
+.txt-small.dark {
+  color: #fff;
+}

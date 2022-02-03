@@ -1,19 +1,16 @@
-.container-search-bar {
-}
 .container-search {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-input {
+.container-search input {
   display: flex;
   justify-content: center;
   padding-left: 28px;
   font-size: 18px;
-
   width: 542px;
   height: 52px;
-  border: 1px solid #121212;
+  border: 1px solid #000000;
   box-sizing: border-box;
   border-radius: 61px 0px 0px 61px;
 }
@@ -26,4 +23,11 @@ input {
   height: 52px;
   border-radius: 0px 61px 61px 0px;
   border: 1px solid #121212;
+}
+.container-search.dark input {
+  border: 1px solid #fff;
+  background-color: rgb(59, 57, 57);
+}
+.container-search.dark button {
+  border: 1px solid #fff;
 }

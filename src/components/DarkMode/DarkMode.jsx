@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./darkMode.css";
 
-export default function DarkMode({ dark }) {
-  function btnDarkMode(params) {
-    console.log("dark Mode Activo");
-  }
+export default function DarkMode({ darkModeEnabled, toggleDarkMode }) {
+  let base = "btn-dark-mode";
+  let estiloDinamico = darkModeEnabled ? "dark" : "ligth";
   return (
     <div>
-      <button className="btn-dark-mode" type="button" onClick={btnDarkMode}>
-        Dark Mode
+      <button
+        className={base + " " + estiloDinamico}
+        type="button"
+        onClick={toggleDarkMode}
+      >
+        {darkModeEnabled ? "MODO LIGTH" : "MODO DARK"}
       </button>
     </div>
   );

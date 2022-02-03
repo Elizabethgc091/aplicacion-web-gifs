@@ -37,3 +37,7 @@
     transform: rotate(360deg);
   }
 }
+
+.App.dark {
+  background-color: rgb(59, 57, 57);
+}

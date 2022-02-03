@@ -5,10 +5,12 @@ import "./searchBar.css";
 /** Imports */
 import iconSearch from "./iconSearch.svg";
 
-export default function SearchBar() {
+export default function SearchBar({ darkModeEnabled }) {
+  let base = "container-search";
+  let estiloDark = darkModeEnabled ? "dark" : "ligth";
   return (
     <div className="container-search-bar">
-      <div className="container-search">
+      <div className={base + " " + estiloDark}>
         <input type="text" placeholder="Busca gifs"></input>
         <button>
           {" "}

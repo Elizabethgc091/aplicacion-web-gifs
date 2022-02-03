@@ -21,3 +21,8 @@
   width: 90%;
   height: 100vh;
 }
+
+/* Style Dark Mode */
+.container-txt-results.dark {
+  color: #fff;
+}
