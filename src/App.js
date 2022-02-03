@@ -3,6 +3,10 @@ import React, { useState } from "react";
 /** style App */
 
 import "./App.css";
+
+/** logos */
+import logoHeader from "./components/Header/logoHeader.svg";
+import logoHeaderDark from "./components/Header/logoHeaderDark.svg";
 /** imports components */
 import Header from "./components/Header/Header";
 import SearchBar from "./components/SearchBar/SearchBar";
@@ -17,11 +21,21 @@ function App() {
   }
   return (
     <div className={`App ${darkModeEnabled ? "dark" : "ligth"}`}>
-      <Header darkModeEnabled={darkModeEnabled} />
-      <DarkMode
-        darkModeEnabled={darkModeEnabled}
-        toggleDarkMode={toggleDarkMode}
-      />
+      <header className="container-top">
+        <img
+          src={darkModeEnabled ? logoHeaderDark : logoHeader}
+          alt="logo-header"
+        />
+        <DarkMode
+          darkModeEnabled={darkModeEnabled}
+          toggleDarkMode={toggleDarkMode}
+        />
+      </header>
+
+      <div className="container-header">
+        <Header darkModeEnabled={darkModeEnabled} />
+      </div>
+
       <SearchBar darkModeEnabled={darkModeEnabled} />
       <Results darkModeEnabled={darkModeEnabled} />
       <Footer />

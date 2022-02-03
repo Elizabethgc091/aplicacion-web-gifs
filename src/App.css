@@ -1,6 +1,8 @@
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  font-family: "Short Stack";
+  font-family: "Roboto", sans-serif;
 }
 
 .App-logo {
@@ -39,5 +41,15 @@
 }
 
 .App.dark {
-  background-color: rgb(59, 57, 57);
+  background-color: #090913;
+}
+.container-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 28px;
+}
+.container-top img {
+  width: 60px;
+  height: 60px;
 }

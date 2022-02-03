@@ -1,14 +1,6 @@
 .container-header {
   color: #572ee5;
 }
-.principal-top {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.principal-top img {
-  margin-top: 20px;
-}
 
 .content-text {
   display: flex;
