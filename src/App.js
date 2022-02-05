@@ -21,7 +21,7 @@ function App() {
   }
   return (
     <div className={`App ${darkModeEnabled ? "dark" : "ligth"}`}>
-      <header className="container-top">
+      <header className="container-top main-margin">
         <img
           src={darkModeEnabled ? logoHeaderDark : logoHeader}
           alt="logo-header"
@@ -31,13 +31,11 @@ function App() {
           toggleDarkMode={toggleDarkMode}
         />
       </header>
-
       <div className="container-header">
-        <Header darkModeEnabled={darkModeEnabled} />
+        <Header />
       </div>
-
-      <SearchBar darkModeEnabled={darkModeEnabled} />
-      <Results darkModeEnabled={darkModeEnabled} />
+      <SearchBar />
+      <Results />
       <Footer />
     </div>
   );

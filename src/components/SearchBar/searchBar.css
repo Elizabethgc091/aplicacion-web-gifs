@@ -24,10 +24,3 @@
   border-radius: 0px 61px 61px 0px;
   border: 1px solid #121212;
 }
-.container-search.dark input {
-  border: 1px solid #fff;
-  background-color: rgb(59, 57, 57);
-}
-.container-search.dark button {
-  border: 1px solid #fff;
-}

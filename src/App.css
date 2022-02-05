@@ -41,7 +41,7 @@
 }
 
 .App.dark {
-  background-color: #090913;
+  background-color: #2a2a2a;
 }
 .container-top {
   display: flex;
@@ -52,4 +52,31 @@
 .container-top img {
   width: 60px;
   height: 60px;
+}
+.main-margin {
+  margin-left: 79px;
+}
+
+/* Style Dark Mode*/
+
+/* Header*/
+.dark .text-large {
+  color: #fff;
+}
+.dark .text-small {
+  color: #fff;
+}
+
+/*Search Bar*/
+.dark .container-search input {
+  border: 1px solid #fff;
+  background-color: #2a2a2a;
+}
+.dark .container-search button {
+  border: 1px solid #fff;
+}
+
+/*Results*/
+.dark .container-results {
+  color: #fff;
 }

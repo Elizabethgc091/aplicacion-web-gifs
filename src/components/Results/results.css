@@ -1,28 +1,21 @@
 .container-results {
   display: flex;
   flex-direction: column;
-  margin-top: 12vh;
+  margin-top: 80px;
   align-items: center;
-
   height: 50vh;
   width: 100%;
+  font-size: 24px;
 }
 .container-txt-results {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
+  font-size: 28px;
   color: #572ee5;
-  width: 44vh;
-  height: 8vh;
 }
 .seccion-gifs {
   margin-top: 28px;
   width: 90%;
   height: 100vh;
-}
-
-/* Style Dark Mode */
-.container-txt-results.dark {
-  color: #fff;
 }
