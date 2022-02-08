@@ -1,21 +1,13 @@
 .container-results {
   display: flex;
   flex-direction: column;
-  margin-top: 80px;
-  align-items: center;
-  height: 50vh;
-  width: 100%;
-  font-size: 24px;
-}
-.container-txt-results {
-  display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 28px;
-  color: #572ee5;
 }
-.seccion-gifs {
-  margin-top: 28px;
-  width: 90%;
-  height: 100vh;
+.giphy-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 900px;
+  background-color: #e7e7e7;
 }
