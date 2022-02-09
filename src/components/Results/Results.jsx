@@ -6,7 +6,7 @@ import "./results.css";
 export default function Results() {
   return (
     <div className="container-results">
-      <div>Resultados de la búsqueda</div>
+      <div className="text-results">Resultados de la búsqueda</div>
       <div className="giphy-grid ">
         <GiphyCard />
       </div>

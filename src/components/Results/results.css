@@ -3,11 +3,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 86px;
+}
+.text-results {
+  font-size: 24px;
+  color: #572ee5;
+  margin-bottom: 31px;
 }
 .giphy-grid {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   width: 900px;
-  background-color: #e7e7e7;
+  padding: 20px;
+  background-color: rgb(194, 194, 194);
 }

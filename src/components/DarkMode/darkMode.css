@@ -1,13 +1,17 @@
 .btn-dark-mode {
   width: 128px;
-  height: 33px;
+  height: 43px;
   background-color: #fff;
   border: 1px solid #6809e1;
   box-sizing: border-box;
   border-radius: 61px;
   font-weight: 700;
-  color: #6809e1;
+  color: rgb(68, 0, 222);
   font-size: 16px;
+}
+.btn-dark-mode:hover {
+  background-color: rgb(81, 208, 186);
+  cursor: pointer;
 }
 .btn-dark-mode.dark {
   background-color: rgb(59, 57, 57);

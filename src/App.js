@@ -20,9 +20,6 @@ function App() {
     setDarkModeEnabled(!darkModeEnabled);
   }
 
-  fetch("https://api.giphy.com/v1/gifs/search")
-    .then((response) => response.json())
-    .then((data) => console.log(data));
   return (
     <div className={`App ${darkModeEnabled ? "dark" : "ligth"}`}>
       <header className="container-top main-margin">

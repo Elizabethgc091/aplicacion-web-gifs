@@ -1,16 +1,15 @@
-import React from "react";
-import gifs from "./gifs";
+import React, { useContext } from "react";
+import { AppContext } from "../Context/GifContext";
+
 import "./giphyCard.css";
 
 export default function GiphyCard() {
+  const { gif } = useContext(AppContext);
   return (
     <div className="giphy-grid">
-      {gifs.data.map((gif) => {
+      {gif.map((item) => {
         return (
-          <img
-            className="giphy-card"
-            src={gif.images.downsized_medium.url}
-          ></img>
+          <img className="giphy-card" src={item.images.downsized_medium.url} />
         );
       })}
     </div>
