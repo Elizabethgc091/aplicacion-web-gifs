@@ -13,6 +13,7 @@ export default function SearchBar() {
   const { setIsLoading } = useContext(AppContext);
 
   /** Funcion que guarda la palabra ingresada en el buscador */
+
   function searchWord(event) {
     setValueSearch(event.target.value);
     console.log(valueSearch);
@@ -23,7 +24,7 @@ export default function SearchBar() {
     if (isSearching && valueSearch.length > 0) {
       setIsLoading(true);
       fetch(
-        `https://api.giphy.com/v1/gifs/search?api_key=Idcf4kl34F4NqGMRtxFAeFaKJ4NVrC8h&q=${valueSearch}&limit=9&offset=0&lang=en`
+        `https://api.giphy.com/v1/gifs/search?api_key=Idcf4kl34F4NqGMRtxFAeFaKJ4NVrC8h&q=${valueSearch}&limit=12&offset=0&lang=en`
       )
         .then((response) => response.json())
         .then((data) => {

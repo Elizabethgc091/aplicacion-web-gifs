@@ -88,3 +88,12 @@
 .dark .text-results {
   color: #fff;
 }
+
+/* Footer */
+.dark .container-footer {
+  background-color: #fff;
+  color: #212121;
+}
+.dark .container-footer p {
+  color: #212121;
+}

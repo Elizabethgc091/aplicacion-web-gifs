@@ -1,18 +1,23 @@
 .container-footer {
   display: flex;
   justify-content: space-around;
-
-  width: 100%;
-  background-color: rgb(146, 127, 255);
+  background-color: rgb(68, 0, 222);
 }
 .txt-gifos {
-  background-color: rgb(146, 127, 255);
-  width: 30%;
+  font-size: 20px;
   color: #fff;
 }
 .container-info {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  background-color: brown;
-  width: 70%;
+}
+.container-info P {
+  font-size: 18px;
+  color: #fff;
+}
+.logo-github {
+  width: 28px;
+  height: 28px;
 }
