@@ -1,6 +1,5 @@
 .App {
   display: flex;
-
   flex-direction: column;
   text-align: center;
   font-family: "Roboto", sans-serif;
@@ -41,9 +40,6 @@
   }
 }
 
-.App.dark {
-  background-color: #2a2a2a;
-}
 .container-top {
   display: flex;
   justify-content: space-between;
@@ -59,6 +55,9 @@
 }
 
 /* Style Dark Mode*/
+.App.dark {
+  background-color: #2a2a2a;
+}
 
 /* Header*/
 .dark .text-large {
@@ -72,6 +71,7 @@
 .dark .container-search input {
   border: 1px solid #fff;
   background-color: #2a2a2a;
+  color: #fff;
 }
 .dark .container-search button {
   border: 1px solid #fff;
@@ -83,4 +83,8 @@
 }
 .dark .giphy-grid {
   background-color: #212121;
+}
+
+.dark .text-results {
+  color: #fff;
 }

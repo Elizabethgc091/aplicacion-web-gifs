@@ -10,6 +10,7 @@ export default function SearchBar() {
   const [valueSearch, setValueSearch] = useState("");
   const [isSearching, setIsSearching] = useState(false);
   const { setGif } = useContext(AppContext);
+  const { setIsLoading } = useContext(AppContext);
 
   /** Funcion que guarda la palabra ingresada en el buscador */
   function searchWord(event) {
@@ -20,6 +21,7 @@ export default function SearchBar() {
   /** Fetch */
   useEffect(() => {
     if (isSearching && valueSearch.length > 0) {
+      setIsLoading(true);
       fetch(
         `https://api.giphy.com/v1/gifs/search?api_key=Idcf4kl34F4NqGMRtxFAeFaKJ4NVrC8h&q=${valueSearch}&limit=9&offset=0&lang=en`
       )
@@ -27,6 +29,7 @@ export default function SearchBar() {
         .then((data) => {
           setIsSearching(false);
           setGif(data.data);
+          setIsLoading(false);
         })
         .catch((error) => console.log(error));
     }
