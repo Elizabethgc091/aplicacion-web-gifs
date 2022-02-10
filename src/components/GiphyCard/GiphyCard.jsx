@@ -9,7 +9,11 @@ export default function GiphyCard() {
     <div className="giphy-grid">
       {gif.map((item) => {
         return (
-          <img className="giphy-card" src={item.images.downsized_medium.url} />
+          <img
+            key={item.images.downsized_medium.url}
+            className="giphy-card"
+            src={item.images.downsized_medium.url}
+          />
         );
       })}
     </div>
