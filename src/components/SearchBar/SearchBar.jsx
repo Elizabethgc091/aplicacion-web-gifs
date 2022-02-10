@@ -73,6 +73,17 @@ export default function SearchBar() {
           <img src={iconSearch} alt="icono-busqueda" />
         </button>
       </div>
+      {valueSearch.length > 0 ? (
+        <div className="autocomplete-results">
+          <ol>
+            {autocompleteResults.map((result) => {
+              return <li key={result.name}>{result.name}</li>;
+            })}
+          </ol>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 }
