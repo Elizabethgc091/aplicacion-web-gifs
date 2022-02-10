@@ -9,14 +9,16 @@ import { AppContext } from "../Context/GifContext";
 export default function SearchBar() {
   const [valueSearch, setValueSearch] = useState("");
   const [isSearching, setIsSearching] = useState(false);
+  const [autocompleteResults, setAutocompleteResults] = useState([]);
+  const [isLoadingAutocomplete, setIsLoadingAutocomplete] = useState(false);
   const { setGif } = useContext(AppContext);
   const { setIsLoading } = useContext(AppContext);
 
   /** Funcion que guarda la palabra ingresada en el buscador */
 
   function searchWord(event) {
+    setIsLoadingAutocomplete(true);
     setValueSearch(event.target.value);
-    console.log(valueSearch);
   }
 
   /** Fetch */
@@ -35,6 +37,23 @@ export default function SearchBar() {
         .catch((error) => console.log(error));
     }
   }, [isSearching, valueSearch]);
+
+  /** Fetch de autocomplete */
+
+  useEffect(() => {
+    if (isLoadingAutocomplete && valueSearch.length > 0) {
+      fetch(
+        `https://api.giphy.com/v1/gifs/search/tags?api_key=Idcf4kl34F4NqGMRtxFAeFaKJ4NVrC8h&q=${valueSearch}&limit=12&offset=0&lang=en`
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          setAutocompleteResults(data.data);
+          setIsLoadingAutocomplete(false);
+          console.log(data.data);
+        })
+        .catch((error) => console.log(error));
+    }
+  }, [isLoadingAutocomplete, valueSearch]);
 
   return (
     <div className="container-search-bar">

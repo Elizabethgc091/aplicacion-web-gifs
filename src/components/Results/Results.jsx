@@ -6,9 +6,11 @@ import "./results.css";
 
 export default function Results() {
   const { isLoading } = useContext(AppContext);
+
   return (
     <div className="container-results">
       <div className="text-results">Resultados de la búsqueda</div>
+
       <div className="giphy-grid ">
         <GiphyCard />
         {isLoading ? <p>Cargando...</p> : ""}
