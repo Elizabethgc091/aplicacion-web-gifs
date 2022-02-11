@@ -26,12 +26,11 @@ function App() {
 
   useEffect(() => {
     fetch(
-      "https://api.giphy.com/v1/gifs/trending?api_key=Idcf4kl34F4NqGMRtxFAeFaKJ4NVrC8h&limit=12&rating=g"
+      "https://api.giphy.com/v1/gifs/trending?api_key=Idcf4kl34F4NqGMRtxFAeFaKJ4NVrC8h&limit=15&rating=g"
     )
       .then((response) => response.json())
       .then((data) => {
         setGif(data.data);
-        console.log(data.data);
       });
   }, []);
 
