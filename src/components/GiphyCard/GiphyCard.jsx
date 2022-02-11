@@ -7,10 +7,10 @@ export default function GiphyCard() {
   const { gif } = useContext(AppContext);
   return (
     <div className="giphy-grid">
-      {gif.map((item) => {
+      {gif.map((item, index) => {
         return (
           <img
-            key={item.images.downsized_medium.url}
+            key={`${index + 1}-${item.images.downsized_medium.url}`}
             className="giphy-card"
             src={item.images.downsized_medium.url}
           />

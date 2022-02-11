@@ -36,6 +36,7 @@
 }
 .search-autocomplete {
   display: flex;
+  cursor: pointer;
 }
 .search-autocomplete img {
   width: 22px;

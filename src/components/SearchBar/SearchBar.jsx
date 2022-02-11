@@ -66,6 +66,7 @@ export default function SearchBar() {
             onChange={searchWord}
             value={valueSearch}
           />
+
           <button
             onClick={() => {
               setIsSearching(true);
@@ -75,15 +76,21 @@ export default function SearchBar() {
             <img src={iconSearch} alt="icono-busqueda" />
           </button>
         </div>
-
+        {/** Lista de sugerencias */}
         {valueSearch.length > 0 ? (
           <div className="container-autocomplete-results">
             <ol>
-              {autocompleteResults.map((result) => {
+              {autocompleteResults.map((result, index) => {
                 return (
-                  <div className="search-autocomplete">
-                    <img src={searchAutoComplete} alt="" />
-                    <li key={result.name}>{result.name}</li>
+                  <div
+                    key={`${index + 1}-${result.name}`}
+                    className="search-autocomplete"
+                  >
+                    <img
+                      src={searchAutoComplete}
+                      alt={`${index + 1}-${result.name}`}
+                    />
+                    <li key={`${index + 1}-${result.name}`}>{result.name}</li>
                   </div>
                 );
               })}

@@ -20,6 +20,8 @@ function App() {
     setDarkModeEnabled(!darkModeEnabled);
   }
 
+  /** Fetch trending */
+
   return (
     <div className={`App ${darkModeEnabled ? "dark" : "ligth"}`}>
       <header className="container-top main-margin">
