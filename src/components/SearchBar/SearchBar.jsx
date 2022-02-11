@@ -83,14 +83,23 @@ export default function SearchBar() {
               {autocompleteResults.map((result, index) => {
                 return (
                   <div
+                    onClick={() => {
+                      setValueSearch(result.name);
+                      setIsSearching(true);
+                    }}
                     key={`${index + 1}-${result.name}`}
-                    className="search-autocomplete"
                   >
-                    <img
-                      src={searchAutoComplete}
-                      alt={`${index + 1}-${result.name}`}
-                    />
-                    <li key={`${index + 1}-${result.name}`}>{result.name}</li>
+                    <div
+                      key={`${index + 1}-${result.name}`}
+                      className="search-autocomplete"
+                    >
+                      <img
+                        src={searchAutoComplete}
+                        alt={`${index + 1}-${result.name}`}
+                      />
+
+                      <li key={`${index + 1}-${result.name}`}>{result.name}</li>
+                    </div>
                   </div>
                 );
               })}
