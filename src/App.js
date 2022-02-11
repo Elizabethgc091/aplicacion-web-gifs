@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 
 /** style App */
 
@@ -13,14 +13,27 @@ import SearchBar from "./components/SearchBar/SearchBar";
 import Results from "./components/Results/Results";
 import Footer from "./components/Footer/Footer";
 import DarkMode from "./components/DarkMode/DarkMode";
+import { AppContext } from "./components/Context/GifContext";
 
 function App() {
   const [darkModeEnabled, setDarkModeEnabled] = useState(false);
+  const { gif, setGif } = useContext(AppContext);
   function toggleDarkMode() {
     setDarkModeEnabled(!darkModeEnabled);
   }
 
   /** Fetch trending */
+
+  useEffect(() => {
+    fetch(
+      "https://api.giphy.com/v1/gifs/trending?api_key=Idcf4kl34F4NqGMRtxFAeFaKJ4NVrC8h&limit=12&rating=g"
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setGif(data.data);
+        console.log(data.data);
+      });
+  }, []);
 
   return (
     <div className={`App ${darkModeEnabled ? "dark" : "ligth"}`}>
