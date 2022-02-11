@@ -76,6 +76,12 @@
 .dark .container-search button {
   border: 1px solid #fff;
 }
+.dark .container-autocomplete-results {
+  border: 1px solid #fff;
+}
+.dark .search-autocomplete li {
+  color: #fff;
+}
 
 /*Results*/
 .dark .container-results {

@@ -4,6 +4,7 @@ import React, { useContext, useEffect, useState } from "react";
 import "./searchBar.css";
 /** Imports */
 import iconSearch from "./iconSearch.svg";
+import searchAutoComplete from "./searchAutoComplete.svg";
 import { AppContext } from "../Context/GifContext";
 
 export default function SearchBar() {
@@ -21,7 +22,7 @@ export default function SearchBar() {
     setValueSearch(event.target.value);
   }
 
-  /** Fetch */
+  /** Fetch Search */
   useEffect(() => {
     if (isSearching && valueSearch.length > 0) {
       setIsLoading(true);
@@ -43,7 +44,7 @@ export default function SearchBar() {
   useEffect(() => {
     if (isLoadingAutocomplete && valueSearch.length > 0) {
       fetch(
-        `https://api.giphy.com/v1/gifs/search/tags?api_key=Idcf4kl34F4NqGMRtxFAeFaKJ4NVrC8h&q=${valueSearch}&limit=12&offset=0&lang=en`
+        `https://api.giphy.com/v1/gifs/search/tags?api_key=Idcf4kl34F4NqGMRtxFAeFaKJ4NVrC8h&q=${valueSearch}&limit=5&offset=0&lang=en`
       )
         .then((response) => response.json())
         .then((data) => {
@@ -58,32 +59,40 @@ export default function SearchBar() {
   return (
     <div className="container-search-bar">
       <div className="container-search">
-        <input
-          type="text"
-          placeholder="Busca gifs"
-          onChange={searchWord}
-          value={valueSearch}
-        />
-        <button
-          onClick={() => {
-            setIsSearching(true);
-          }}
-        >
-          {" "}
-          <img src={iconSearch} alt="icono-busqueda" />
-        </button>
-      </div>
-      {valueSearch.length > 0 ? (
-        <div className="autocomplete-results">
-          <ol>
-            {autocompleteResults.map((result) => {
-              return <li key={result.name}>{result.name}</li>;
-            })}
-          </ol>
+        <div className="container-barra-busqueda">
+          <input
+            type="text"
+            placeholder="Busca gifs"
+            onChange={searchWord}
+            value={valueSearch}
+          />
+          <button
+            onClick={() => {
+              setIsSearching(true);
+            }}
+          >
+            {" "}
+            <img src={iconSearch} alt="icono-busqueda" />
+          </button>
         </div>
-      ) : (
-        ""
-      )}
+
+        {valueSearch.length > 0 ? (
+          <div className="container-autocomplete-results">
+            <ol>
+              {autocompleteResults.map((result) => {
+                return (
+                  <div className="search-autocomplete">
+                    <img src={searchAutoComplete} alt="" />
+                    <li key={result.name}>{result.name}</li>
+                  </div>
+                );
+              })}
+            </ol>
+          </div>
+        ) : (
+          ""
+        )}
+      </div>
     </div>
   );
 }
