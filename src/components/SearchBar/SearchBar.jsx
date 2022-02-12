@@ -67,12 +67,7 @@ export default function SearchBar() {
             value={valueSearch}
           />
 
-          <button
-            onClick={() => {
-              setIsSearching(true);
-            }}
-          >
-            {" "}
+          <button onClick={() => setIsSearching(true)}>
             <img src={iconSearch} alt="icono-busqueda" />
           </button>
         </div>
