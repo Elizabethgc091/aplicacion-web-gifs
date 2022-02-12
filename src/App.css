@@ -94,6 +94,9 @@
 .dark .text-results {
   color: #fff;
 }
+.dark .message-notfound {
+  color: #fff;
+}
 
 /* Footer */
 .dark .container-footer {

@@ -18,3 +18,7 @@
   padding: 20px;
   background-color: rgb(194, 194, 194);
 }
+.message-notfound {
+  color: #572ee5;
+  font-size: 20px;
+}

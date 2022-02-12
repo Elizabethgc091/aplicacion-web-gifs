@@ -17,7 +17,13 @@ export default function Results() {
         {gifs.map((gif, index) => {
           return <GiphyCard gif={gif} index={index} />;
         })}
-        {gifs.length === 0 ? "no hay resultados" : ""}
+        {gifs.length === 0 ? (
+          <div className="message-notfound">
+            Lo sentimos, no hemos podido encontrar ningún resultado
+          </div>
+        ) : (
+          ""
+        )}
         {isLoading ? <p>Cargando...</p> : ""}
       </div>
     </div>
