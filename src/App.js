@@ -13,11 +13,12 @@ import SearchBar from "./components/SearchBar/SearchBar";
 import Results from "./components/Results/Results";
 import Footer from "./components/Footer/Footer";
 import DarkMode from "./components/DarkMode/DarkMode";
+/** AppContext */
 import { AppContext } from "./components/Context/GifContext";
 
 function App() {
   const [darkModeEnabled, setDarkModeEnabled] = useState(false);
-  const { gifs, setGifs } = useContext(AppContext);
+  const { setGifs } = useContext(AppContext);
   function toggleDarkMode() {
     setDarkModeEnabled(!darkModeEnabled);
   }
@@ -29,9 +30,7 @@ function App() {
       "https://api.giphy.com/v1/gifs/trending?api_key=Idcf4kl34F4NqGMRtxFAeFaKJ4NVrC8h&limit=15&rating=g"
     )
       .then((response) => response.json())
-      .then((data) => {
-        setGifs(data.data);
-      });
+      .then((data) => setGifs(data.data));
   }, []);
 
   return (
