@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/aplicacion-web-gifs/static/css/main.b13e4cea.css",
+    "main.js": "/aplicacion-web-gifs/static/js/main.bfc1912a.js",
+    "static/js/787.5f082fdd.chunk.js": "/aplicacion-web-gifs/static/js/787.5f082fdd.chunk.js",
+    "static/media/ilustraHeader.svg": "/aplicacion-web-gifs/static/media/ilustraHeader.9d4669b1de8e9e1e6e0507c6bb54d72e.svg",
+    "static/media/searchAutoComplete.svg": "/aplicacion-web-gifs/static/media/searchAutoComplete.9c16f22189766249b0e44f4f4c2c10e1.svg",
+    "static/media/logoHeaderDark.svg": "/aplicacion-web-gifs/static/media/logoHeaderDark.47e214b17c3037328c0bbb13370e2b1f.svg",
+    "static/media/logoHeader.svg": "/aplicacion-web-gifs/static/media/logoHeader.2f122678cae9de30f4c681a90fa18cb8.svg",
+    "static/media/iconSearch.svg": "/aplicacion-web-gifs/static/media/iconSearch.81461f20ae055c190ca0c165943ba65a.svg",
+    "index.html": "/aplicacion-web-gifs/index.html",
+    "main.b13e4cea.css.map": "/aplicacion-web-gifs/static/css/main.b13e4cea.css.map",
+    "main.bfc1912a.js.map": "/aplicacion-web-gifs/static/js/main.bfc1912a.js.map",
+    "787.5f082fdd.chunk.js.map": "/aplicacion-web-gifs/static/js/787.5f082fdd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b13e4cea.css",
+    "static/js/main.bfc1912a.js"
+  ]
+}
