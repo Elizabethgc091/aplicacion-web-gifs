@@ -9,10 +9,9 @@ export default function GiphyCard() {
     <div className="giphy-grid">
       {gif.map((item, index) => {
         return (
-          <div>
+          <div key={`${index + 1}-${item.images.downsized_medium.url}`}>
             <a href={item.url} target="_blank">
               <img
-                key={`${index + 1}-${item.images.downsized_medium.url}`}
                 className="giphy-card"
                 src={item.images.downsized_medium.url}
               />
