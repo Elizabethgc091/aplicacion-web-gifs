@@ -3,23 +3,18 @@ import { AppContext } from "../Context/GifContext";
 
 import "./giphyCard.css";
 
-export default function GiphyCard() {
-  const { gifs } = useContext(AppContext);
+/**
+ * El contenedor de cada GIF
+ * @param {gif} - El objeto gif
+ * @returns GiphyCard
+ */
+
+export default function GiphyCard({ gif, index }) {
   return (
-    <div className="giphy-grid">
-      {gifs.map((item, index) => {
-        return (
-          <div key={`${index + 1}-${item.images.downsized_medium.url}`}>
-            <a href={item.url} target="_blank">
-              <img
-                className="giphy-card"
-                src={item.images.downsized_medium.url}
-              />
-            </a>
-          </div>
-        );
-      })}
-      {gifs.length === 0 ? "no hay resultados" : ""}
+    <div key={`${index + 1}-${gif.images.downsized_medium.url}`}>
+      <a href={gif.url} target="_blank">
+        <img className="giphy-card" src={gif.images.downsized_medium.url} />
+      </a>
     </div>
   );
 }

@@ -51,7 +51,6 @@ function App() {
       </div>
       <SearchBar />
       <Results />
-
       <Footer />
     </div>
   );
