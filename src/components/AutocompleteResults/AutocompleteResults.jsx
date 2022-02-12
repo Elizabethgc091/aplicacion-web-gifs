@@ -5,6 +5,7 @@ import "./autocompleteResults.css";
 export default function AutocompleteResults({
   valueSearch,
   autocompleteResults,
+  setAutocompleteResults,
   setValueSearch,
   setIsSearching,
 }) {
@@ -19,6 +20,7 @@ export default function AutocompleteResults({
                   onClick={() => {
                     setValueSearch(result.name);
                     setIsSearching(true);
+                    setAutocompleteResults([]);
                   }}
                   key={`${index + 1}-${result.name}`}
                 >
