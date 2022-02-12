@@ -3,11 +3,11 @@ import React, { createContext, useState } from "react";
 export const AppContext = createContext();
 
 export function AppProvider({ children }) {
-  const [gif, setGif] = useState([]);
+  const [gifs, setGifs] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   return (
-    <AppContext.Provider value={{ gif, setGif, isLoading, setIsLoading }}>
+    <AppContext.Provider value={{ gifs, setGifs, isLoading, setIsLoading }}>
       {children}
     </AppContext.Provider>
   );

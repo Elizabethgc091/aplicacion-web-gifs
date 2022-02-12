@@ -17,7 +17,7 @@ import { AppContext } from "./components/Context/GifContext";
 
 function App() {
   const [darkModeEnabled, setDarkModeEnabled] = useState(false);
-  const { gif, setGif } = useContext(AppContext);
+  const { gifs, setGifs } = useContext(AppContext);
   function toggleDarkMode() {
     setDarkModeEnabled(!darkModeEnabled);
   }
@@ -30,7 +30,7 @@ function App() {
     )
       .then((response) => response.json())
       .then((data) => {
-        setGif(data.data);
+        setGifs(data.data);
       });
   }, []);
 

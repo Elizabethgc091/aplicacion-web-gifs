@@ -4,10 +4,10 @@ import { AppContext } from "../Context/GifContext";
 import "./giphyCard.css";
 
 export default function GiphyCard() {
-  const { gif } = useContext(AppContext);
+  const { gifs } = useContext(AppContext);
   return (
     <div className="giphy-grid">
-      {gif.map((item, index) => {
+      {gifs.map((item, index) => {
         return (
           <div key={`${index + 1}-${item.images.downsized_medium.url}`}>
             <a href={item.url} target="_blank">
@@ -19,7 +19,7 @@ export default function GiphyCard() {
           </div>
         );
       })}
-      {gif.length === 0 ? "no hay resultados" : ""}
+      {gifs.length === 0 ? "no hay resultados" : ""}
     </div>
   );
 }

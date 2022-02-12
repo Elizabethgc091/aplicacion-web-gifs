@@ -12,7 +12,7 @@ export default function SearchBar() {
   const [isSearching, setIsSearching] = useState(false);
   const [autocompleteResults, setAutocompleteResults] = useState([]);
   const [isLoadingAutocomplete, setIsLoadingAutocomplete] = useState(false);
-  const { setGif } = useContext(AppContext);
+  const { setGifs } = useContext(AppContext);
   const { setIsLoading } = useContext(AppContext);
 
   /** Funcion que guarda la palabra ingresada en el buscador */
@@ -32,7 +32,7 @@ export default function SearchBar() {
         .then((response) => response.json())
         .then((data) => {
           setIsSearching(false);
-          setGif(data.data);
+          setGifs(data.data);
           setIsLoading(false);
         })
         .catch((error) => console.log(error));
