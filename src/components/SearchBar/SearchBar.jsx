@@ -4,7 +4,8 @@ import React, { useContext, useEffect, useState } from "react";
 import "./searchBar.css";
 /** Imports */
 import iconSearch from "./iconSearch.svg";
-import searchAutoComplete from "./searchAutoComplete.svg";
+import AutocompleteResults from "../AutocompleteResults/AutocompleteResults";
+
 import { AppContext } from "../Context/GifContext";
 
 export default function SearchBar() {
@@ -72,37 +73,13 @@ export default function SearchBar() {
           </button>
         </div>
         {/** Lista de sugerencias */}
-        {valueSearch.length > 0 && autocompleteResults.length > 0 ? (
-          <div className="container-autocomplete-results">
-            <ol>
-              {autocompleteResults.map((result, index) => {
-                return (
-                  <div
-                    onClick={() => {
-                      setValueSearch(result.name);
-                      setIsSearching(true);
-                    }}
-                    key={`${index + 1}-${result.name}`}
-                  >
-                    <div
-                      key={`${index + 1}-${result.name}`}
-                      className="search-autocomplete"
-                    >
-                      <img
-                        src={searchAutoComplete}
-                        alt={`${index + 1}-${result.name}`}
-                      />
 
-                      <li key={`${index + 1}-${result.name}`}>{result.name}</li>
-                    </div>
-                  </div>
-                );
-              })}
-            </ol>
-          </div>
-        ) : (
-          ""
-        )}
+        <AutocompleteResults
+          valueSearch={valueSearch}
+          autocompleteResults={autocompleteResults}
+          setIsSearching={setIsSearching}
+          setValueSearch={setValueSearch}
+        />
       </div>
     </div>
   );
