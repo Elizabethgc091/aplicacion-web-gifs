@@ -77,7 +77,7 @@ export default function SearchBar() {
           </button>
         </div>
         {/** Lista de sugerencias */}
-        {valueSearch.length > 0 ? (
+        {valueSearch.length > 0 && autocompleteResults.length > 0 ? (
           <div className="container-autocomplete-results">
             <ol>
               {autocompleteResults.map((result, index) => {

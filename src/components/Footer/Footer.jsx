@@ -12,7 +12,7 @@ export default function Footer() {
       </div>
       <div className="container-info">
         <p>Elizabeth Gonzalez Cruz</p>
-        <a href="https://github.com/Elizabethgc091">
+        <a href="https://github.com/Elizabethgc091" target="_blank">
           <img src="https://img.icons8.com/glyph-neue/64/000000/github.png" />
         </a>
       </div>

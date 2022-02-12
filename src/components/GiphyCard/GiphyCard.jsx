@@ -19,6 +19,7 @@ export default function GiphyCard() {
           </div>
         );
       })}
+      {gif.length === 0 ? "no hay resultados" : ""}
     </div>
   );
 }
