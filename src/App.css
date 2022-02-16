@@ -100,9 +100,9 @@
 
 /* Footer */
 .dark .container-footer {
-  background-color: #fff;
-  color: #212121;
+  background-color: #2a2a2a;
 }
 .dark .container-footer p {
   color: #212121;
+  color: #fff;
 }

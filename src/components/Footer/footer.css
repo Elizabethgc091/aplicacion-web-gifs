@@ -1,27 +1,33 @@
 .container-footer {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+
   background-color: #583cbd;
   width: 100%;
+  margin-top: 38px;
+  color: #fff;
 }
-.txt-gifos {
-  font-size: 18px;
-  padding-right: 15px;
-}
-.container-info {
+.copyright {
+  flex: 1;
   display: flex;
-  flex: 0.5;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-creator {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+}
+.social-netwoks {
+  display: flex;
   justify-content: center;
   align-items: center;
-
-  font-size: 21px;
 }
-.container-info p {
-  padding-right: 15px;
-}
-
-.container-info img {
-  height: 40px;
-  padding-right: 15px;
+.social-netwoks img {
+  height: 38px;
+  margin-right: 28px;
 }
