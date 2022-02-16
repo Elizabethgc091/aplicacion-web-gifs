@@ -28,7 +28,7 @@ export default function SearchBar() {
     if (isSearching && valueSearch.length > 0) {
       setIsLoading(true);
       fetch(
-        `https://api.giphy.com/v1/gifs/search?api_key=Idcf4kl34F4NqGMRtxFAeFaKJ4NVrC8h&q=${valueSearch}&limit=12&offset=0&lang=en`
+        `https://api.giphy.com/v1/gifs/search?api_key=Idcf4kl34F4NqGMRtxFAeFaKJ4NVrC8h&q=${valueSearch}&limit=15&offset=0&lang=en`
       )
         .then((response) => response.json())
         .then((data) => {
@@ -51,7 +51,6 @@ export default function SearchBar() {
         .then((data) => {
           setAutocompleteResults(data.data);
           setIsLoadingAutocomplete(false);
-          console.log(data.data);
         })
         .catch((error) => console.log(error));
     }
